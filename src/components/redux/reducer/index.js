@@ -7,7 +7,7 @@ const mainReducer = (state = initialState, action) => {
     case "GO_TO_DETAIL":
       return {
         ...state,
-        users: [...state.users, action.payload],
+        users: [action.payload],
       };
     default:
       return state;
