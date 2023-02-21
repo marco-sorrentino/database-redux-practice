@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Badge } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
@@ -11,23 +11,48 @@ const UserDetails = (props) => {
         <Col>
           {userDetail.map((el, i) => {
             return (
-              <div key={i}>
+              <div key={i} className="d-flex justify-content-center mt-5">
                 <div>
                   <img src={el.image} alt="" />
                 </div>
                 <div>
-                  <p>{el.firstName}</p>
-                  <p>{el.lastName}</p>
-                  <p>{el.age}</p>
-                  <p>{el.gender}</p>
-                  <p>{el.email}</p>
-                  <p>{el.phone}</p>
-                  <p>{el.birthDate}</p>
-                  <p>{el.height}</p>
-                  <p>{el.weight}</p>
-                  <p>{el.university}</p>
-                  <p>{el.company.address.city}</p>
-                  <p>{el.company.address.address}</p>
+                  <p>
+                    <Badge bg="primary">Name:</Badge> {el.firstName}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Lastname:</Badge> {el.lastName}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Age:</Badge> {el.age}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Gender:</Badge> {el.gender}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Email:</Badge> {el.email}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Phone:</Badge> {el.phone}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Birthday:</Badge> {el.birthDate}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Height:</Badge> {el.height}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Weight:</Badge> {el.weight}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Univerity:</Badge> {el.university}
+                  </p>
+                  <p>
+                    <Badge bg="primary">City:</Badge> {el.company.address.city}
+                  </p>
+                  <p>
+                    <Badge bg="primary">Address:</Badge>{" "}
+                    {el.company.address.address}
+                  </p>
                 </div>
               </div>
             );

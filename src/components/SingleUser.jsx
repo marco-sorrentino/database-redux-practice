@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { goToDetailAction } from "./redux/action";
 
 const SingleUser = (props) => {
   const navigate = useNavigate();
@@ -19,10 +20,7 @@ const SingleUser = (props) => {
         </div>
         <Button
           onClick={() => {
-            dispatch({
-              type: "GO_TO_DETAIL",
-              payload: props.userObj,
-            });
+            dispatch(goToDetailAction(props));
             navigate("/userDetails/");
           }}
           variant="primary p-1 mt-2"
