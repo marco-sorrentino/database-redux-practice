@@ -1,8 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const UserDetails = (props) => {
   const userDetail = useSelector((state) => state.users);
+  useEffect(() => {}, []);
   return (
     <Container>
       <Row>
