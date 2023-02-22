@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export const SeeGroup = () => {
-  const showList = useSelector((state) => state.list);
+  const showList = useSelector((state) => state.list.list);
   return (
     <Container>
       <Row>

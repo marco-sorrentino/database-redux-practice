@@ -1,8 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import mainReducer from "../reducer";
+import listReducer from "../reducer/listReducer";
+import userReducer from "../reducer/userReducer";
+
+const bigReducer = combineReducers({
+  list: listReducer,
+  user: userReducer,
+});
 
 const store = configureStore({
-  reducer: mainReducer,
+  reducer: bigReducer,
 });
 
 export default store;

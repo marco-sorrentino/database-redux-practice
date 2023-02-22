@@ -2,7 +2,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
 export const Group = () => {
-  const seeGroup = useSelector((state) => state.list);
+  const seeGroup = useSelector((state) => state.list.list);
   return (
     <Container>
       <Row>

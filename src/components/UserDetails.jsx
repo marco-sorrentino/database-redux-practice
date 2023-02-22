@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 const UserDetails = (props) => {
-  const userDetail = useSelector((state) => state.users);
+  const userDetail = useSelector((state) => state.user.users);
   useEffect(() => {}, []);
   return (
     <Container>

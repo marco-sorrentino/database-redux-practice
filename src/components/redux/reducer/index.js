@@ -1,4 +1,4 @@
-import { GO_TO_DETAIL } from "../action";
+/* import { GO_TO_DETAIL } from "../action";
 
 const initialState = {
   users: [],
@@ -23,3 +23,4 @@ const mainReducer = (state = initialState, action) => {
 };
 
 export default mainReducer;
+ */
