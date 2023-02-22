@@ -16,9 +16,9 @@ export const goToListAction = (props) => {
   };
 };
 
-export const removeFromGroupAction = (props) => {
+export const removeFromGroupAction = (el) => {
   return {
     type: REMOVE_FROM_LIST,
-    payload: props.userObj,
+    payload: el,
   };
 };

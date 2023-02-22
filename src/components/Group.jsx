@@ -2,7 +2,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromGroupAction } from "./redux/action";
 
-export const Group = (props) => {
+export const Group = () => {
   const seeGroup = useSelector((state) => state.list.list);
   const dispatch = useDispatch();
   return (
@@ -24,7 +24,7 @@ export const Group = (props) => {
                   <Card.Text>{el.university}</Card.Text>
                   <Button
                     onClick={() => {
-                      dispatch(removeFromGroupAction(props));
+                      dispatch(removeFromGroupAction(el));
                     }}
                     variant="danger"
                   >
