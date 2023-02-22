@@ -4,7 +4,7 @@ const initialState = {
   users: [],
 };
 
-const mainReducer = (state = initialState, action) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case GO_TO_DETAIL:
       return {
@@ -16,4 +16,4 @@ const mainReducer = (state = initialState, action) => {
   }
 };
 
-export default mainReducer;
+export default userReducer;

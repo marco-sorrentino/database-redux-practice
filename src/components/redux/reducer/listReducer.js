@@ -5,7 +5,7 @@ const initialState = {
   list: [],
 };
 
-const mainReducer = (state = initialState, action) => {
+const listReducer = (state = initialState, action) => {
   switch (action.type) {
     case GO_TO_LIST:
       return {
@@ -17,4 +17,4 @@ const mainReducer = (state = initialState, action) => {
   }
 };
 
-export default mainReducer;
+export default listReducer;
