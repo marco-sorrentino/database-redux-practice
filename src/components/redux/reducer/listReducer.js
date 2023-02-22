@@ -1,7 +1,6 @@
 import { GO_TO_LIST } from "../action";
 
 const initialState = {
-  users: [],
   list: [],
 };
 

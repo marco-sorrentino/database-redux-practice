@@ -1,5 +1,6 @@
 export const GO_TO_DETAIL = "GO_TO_DETAIL";
 export const GO_TO_LIST = "GO_TO_LIST";
+export const REMOVE_FROM_LIST = "REMOVE_FROM_LIST";
 
 export const goToDetailAction = (props) => {
   return {
@@ -11,6 +12,13 @@ export const goToDetailAction = (props) => {
 export const goToListAction = (props) => {
   return {
     type: GO_TO_LIST,
+    payload: props.userObj,
+  };
+};
+
+export const removeFromGroupAction = (props) => {
+  return {
+    type: REMOVE_FROM_LIST,
     payload: props.userObj,
   };
 };
