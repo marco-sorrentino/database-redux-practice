@@ -1,5 +1,4 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import mainReducer from "../reducer";
 import listReducer from "../reducer/listReducer";
 import userReducer from "../reducer/userReducer";
 
