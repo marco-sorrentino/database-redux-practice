@@ -2,7 +2,6 @@ import { GO_TO_DETAIL } from "../action";
 
 const initialState = {
   users: [],
-  loading: false,
   list: [],
 };
 
