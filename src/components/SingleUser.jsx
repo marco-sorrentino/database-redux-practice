@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { goToDetailAction } from "./redux/action";
+import { goToDetailAction, goToListAction } from "./redux/action";
 
 const SingleUser = (props) => {
   const navigate = useNavigate();
@@ -18,15 +18,25 @@ const SingleUser = (props) => {
           <p className="mb-0">{props.userObj.firstName}</p>
           <p className="ms-2 mb-0">{props.userObj.lastName}</p>
         </div>
-        <Button
-          onClick={() => {
-            dispatch(goToDetailAction(props));
-            navigate("/userDetails/");
-          }}
-          variant="primary p-1 mt-2"
-        >
-          Detail
-        </Button>
+        <div className="d-flex align-items-center">
+          <Button
+            onClick={() => {
+              dispatch(goToDetailAction(props));
+              navigate("/userDetails/");
+            }}
+            variant="primary p-1 mt-2"
+          >
+            Detail
+          </Button>
+          <Button
+            onClick={() => {
+              dispatch(goToListAction(props));
+            }}
+            variant="success p-1 mt-2 ms-2"
+          >
+            ADD
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { CounterCards } from "./CounterCards";
+import { SeeGroup } from "./SeeGroup";
 import SingleUser from "./SingleUser";
 
 const UserList = (props) => {
@@ -26,6 +28,8 @@ const UserList = (props) => {
 
   return (
     <Container>
+      <CounterCards counter={users?.length} />
+      <SeeGroup />
       <Row>
         {users?.map((el) => {
           return (

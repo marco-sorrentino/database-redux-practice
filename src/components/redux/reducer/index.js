@@ -3,6 +3,7 @@ import { GO_TO_DETAIL } from "../action";
 const initialState = {
   users: [],
   loading: false,
+  list: [],
 };
 
 const mainReducer = (state = initialState, action) => {
@@ -11,6 +12,11 @@ const mainReducer = (state = initialState, action) => {
       return {
         ...state,
         users: [action.payload],
+      };
+    case "GO_TO_LIST":
+      return {
+        ...state,
+        list: [...state.list, action.payload],
       };
     default:
       return state;
