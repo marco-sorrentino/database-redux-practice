@@ -1,7 +1,8 @@
-import { GO_TO_DETAIL } from "../action";
+import { GET_USER_LOADING, GO_TO_DETAIL } from "../action";
 
 const initialState = {
   users: [],
+  loading: false,
 };
 
 const userReducer = (state = initialState, action) => {
@@ -10,6 +11,11 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         users: [action.payload],
+      };
+    case GET_USER_LOADING:
+      return {
+        ...state,
+        loading: action.payload,
       };
     default:
       return state;

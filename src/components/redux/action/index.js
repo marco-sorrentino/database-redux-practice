@@ -1,6 +1,7 @@
 export const GO_TO_DETAIL = "GO_TO_DETAIL";
 export const GO_TO_LIST = "GO_TO_LIST";
 export const REMOVE_FROM_LIST = "REMOVE_FROM_LIST";
+export const GET_USER_LOADING = "GET_USER_LOADING";
 
 export const goToDetailAction = (props) => {
   return {

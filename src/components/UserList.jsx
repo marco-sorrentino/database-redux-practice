@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { CounterCards } from "./CounterCards";
 import { SeeGroup } from "./SeeGroup";
 import SingleUser from "./SingleUser";
 
 const UserList = (props) => {
   const [users, setUsers] = useState();
+  const loading = useSelector((state) => state.user.loading);
 
   useEffect(() => {
     getData();
@@ -38,6 +40,9 @@ const UserList = (props) => {
             </Col>
           );
         })}
+        {loading && (
+          <Spinner animation="border" variant="info" className="mt-3" />
+        )}
       </Row>
     </Container>
   );
